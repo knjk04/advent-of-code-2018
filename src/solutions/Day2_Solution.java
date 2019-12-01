@@ -2,7 +2,6 @@ package solutions;
 
 import utils.Util;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -10,16 +9,15 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class Day2_Solution {
-    private int twoLetterCount = 0;
-    private int threeLetterCount = 0;
 
     public static void main(String[] args) {
         List<String> input = Util.readInput("/day02.txt");
-//        new Day2_Solution().runPartOne(input);
+        new Day2_Solution().runPartOne(input);
         new Day2_Solution().runPartTwo(input);
     }
 
     private void runPartOne(List<String> input) {
+        int twoLetterCount = 0, threeLetterCount = 0;
         HashMap<Character, Integer> chars = new HashMap<>();
         for (String line : input) {
             // check if each character in the ID is in the hashmap
